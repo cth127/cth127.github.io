@@ -1,4 +1,8 @@
-# 00 Intro
+---
+title: "00 Intro"
+date: 2020-02-15 
+categories: NLP101
+---
 
 ### 0. 들어가며
 
