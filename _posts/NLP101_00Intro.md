@@ -1,5 +1,5 @@
 ---
-title: "00 Intro"
+title: "NLP101 - 00 Intro"
 date: 2020-02-15 
 categories: NLP101
 ---
