@@ -10,4 +10,14 @@ categories: NLP101
 
 ## 2. spaCy
 
+함수의 입력으로 string을 받는 NLTK와 달리 spaCy는 자체적인 Container을 그 입력으로 받는다. Container에는 `Doc`, `Token`, `Span`, `Lexeme` 네 가지가  있다. 
+
+![img1](https://spacy.io/architecture-bcdfffe5c0b9f221a2f6607f96ca0e4a.svg)
+
+이 중 중심이 되는 것은 string으로 이뤄진 문서를 객체화하는 `Doc`이다. [설명 문서](https://spacy.io/api)에 따르면 `Doc`은 문서를 나름의 pipeline을 통해 재구성하여 저장하는 공간이고, `Token`과 `Span`은 그 문서를 설명하는 두 가지 방식이다. `Token`은 문장이나 단어 등 문서를 이루는 의미 단위로 문서를 설명하는 방식이며, `Span`은 우리가 다른 자료형에서 해왔던 것과 비슷한, 숫자를 이용한 인덱싱방식이다. 이 외 `Vocab`과 `Lexeme`은 단어를 인코딩하는 방식인데, 본 지면의 목적과 다르므로 이후 필요하면 서술하기로 한다. 우리가 다루고자 하는 task에서 기억해야 할 건, 우리가 주로 사용할 함수는 주로 `Doc` 객체 수준에서 다뤄진다는 점이다. 그렇다면 `Doc` 객체는 어떻게 만들어지는가?
+
+![img2]https://spacy.io/pipeline-7a14d4edd18f3edfee8f34393bff2992.svg
+
+
+
 (작성중)
