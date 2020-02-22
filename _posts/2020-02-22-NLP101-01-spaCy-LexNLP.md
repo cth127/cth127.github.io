@@ -32,7 +32,17 @@ doc = nlp(example)   # 실행
 
 앞서 언급했듯이 `English` 클래스는 원래의 문서를 그대로 입력으로 받기에 이를 통해 자기 자신만의 `pipeline`을 제작할 수 있으며, tokenization같은 아주 기초적인 전처리 과정이 아니라 NER, POS tagging 등 이차적인 작업을 수행하는 데 목적이 있다면 `en_core_web_sm` 같은 자체 모델을 불러오는 것도 나쁘지 않다. (각 모델의 소개와 성능 비교는 [다음 링크](https://spacy.io/models/en). 아쉽게도 한국어는 지원하지 않는다.)
 
-## 3. LexNLP
+## 3. [LexNLP](https://arxiv.org/pdf/1806.03688.pdf)
+
+LexNLP는 많이 알려지진 않아 글에 포함시키는 것이 맞을까 고민했으나, Edgar의 데이터로 pre-trained된 모델을 제공한다는 점때문에 포함시키기로 했다. 본 라이브러리는 위 논문의 제목이 말하듯 '*legal and regulatory texts*'를 대상으로 NLP와 IE를 제공한다. 역시 본 글이 주목하는 부분은 IE 부분인데, LexNLP는 주소, 날짜, 금액, named entity 외 여러 정보를 추출할 수 있다(고 한다). 필자가 보기에 LexNLP의 사용에는 다음과 같은 주의점이 따른다.
+
+- 아직 충분히 검증되지 않았다는 점.
+- 여전히 오픈소스이긴 하지만 비영리, 영리 이용이 가능하다고 소개된 논문이 쓰인 2년 전과는 달리, [여러 지불 옵션](https://contraxsuite.com/lexnlp-support/)이 홈페이지에서 소개되고 있기에 이용에 확인이 필요하다는 점.
+- 본 글이 쓰인 시점을 기준으로 최근 두 달 간의 [github commit](https://github.com/LexPredict/lexpredict-lexnlp/graphs/contributors?from=2017-10-29&to=2020-02-22&type=c) 정보가 없다는 점.
+
+[다음 페이지](https://contraxsuite.com/lexnlp-features/)의 맨 아래 부분을 통해 LexNlP의 IE를 간단하게 실습해볼 수 있다. 한 문단을 통해 실습한 결과 다음과 같은 결과물을 얻었다.
+
+
 
 
 
