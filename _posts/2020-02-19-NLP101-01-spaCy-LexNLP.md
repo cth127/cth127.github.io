@@ -1,6 +1,6 @@
 ---
 title: "NLP101 - 01 spaCy & LexNLP"
-date: 2020-02-22
+date: 2020-02-19
 categories: NLP101
 ---
 
@@ -40,10 +40,14 @@ LexNLP는 많이 알려지진 않아 글에 포함시키는 것이 맞을까 고
 - 여전히 오픈소스이긴 하지만 비영리, 영리 이용이 가능하다고 소개된 논문이 쓰인 2년 전과는 달리, [여러 지불 옵션](https://contraxsuite.com/lexnlp-support/)이 홈페이지에서 소개되고 있기에 이용에 확인이 필요하다는 점.
 - 본 글이 쓰인 시점을 기준으로 최근 두 달 간의 [github commit](https://github.com/LexPredict/lexpredict-lexnlp/graphs/contributors?from=2017-10-29&to=2020-02-22&type=c) 정보가 없다는 점.
 
-[다음 페이지](https://contraxsuite.com/lexnlp-features/)의 맨 아래 부분을 통해 LexNlP의 IE를 간단하게 실습해볼 수 있다. 한 문단을 통해 실습한 결과 다음과 같은 결과물을 얻었다. (이미는 결과물의 일부)
+[다음 페이지](https://contraxsuite.com/lexnlp-features/)의 맨 아래 부분을 통해 LexNLP의 IE를 간단하게 실습해볼 수 있다. 한 문단을 통해 실습한 결과 다음과 같은 결과물을 얻었다. (이미는 결과물의 일부)
 
 - (원문) *On August 27, 2018, in connection with the consummation of the Merger, Cotiviti Corporation, a Delaware corporation (“Cotiviti Corporation”), and Cotiviti Domestic Holdings, Inc., a Delaware corporation (together with Cotiviti Corporation, the “Borrowers”), each a subsidiary of Cotiviti, repaid in full all outstanding loans, together with interest and all other amounts due in connection with such repayment, under that certain Amended and Restated First Lien Credit Agreement, dated as of September 28, 2016, by and among the Borrowers, Cotiviti Intermediate Holdings, Inc., a Delaware corporation, the lenders party thereto, and JPMorgan Chase Bank, N.A. as administrative agent for the lenders party thereto (the “Existing Credit Agreement”), and terminated all commitments thereunder. The termination of the Existing Credit Agreement became effective at the effective time of the Merger (the “Effective Time”) on August 27, 2018.*
 
 ![img3](https://github.com/cth127/cth127.github.io/blob/master/image/NLP101_01_img3.jpg?raw=true)
 
 우리가 원하는 '누가 무엇을 어떻게 했다'는 식의 정보는 추출하지 않고, 단순히 문서에 등장한 named entity나 날짜, 금액 등의 정보를 열거하는 형식이긴 하지만 나름대로 활용할 수 있는 여지는 있어 보인다. 혹은 그 소스코드를 분석하여 이후 IE task에 적용할 여지 또한 있어 보인다.
+
+## 4. Outro
+
+위 글을 통해 우리는 spaCy의 기본적인 구조와 LexNLP의 존재에 대해 알아보았다. 이후의 글에서는 spaCy와 NLTK를 통해 여러 NLP task를 실습해보도록 한다.
