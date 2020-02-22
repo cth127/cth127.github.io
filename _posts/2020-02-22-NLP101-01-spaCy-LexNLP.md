@@ -16,7 +16,24 @@ categories: NLP101
 
 이 중 중심이 되는 것은 string으로 이뤄진 문서를 객체화하는 `Doc`이다. [설명 문서](https://spacy.io/api)에 따르면 `Doc`은 문서를 나름의 pipeline을 통해 재구성하여 저장하는 공간이고, `Token`과 `Span`은 그 문서를 설명하는 두 가지 방식이다. `Token`은 문장이나 단어 등 문서를 이루는 의미 단위로 문서를 설명하는 방식이며, `Span`은 우리가 다른 자료형에서 해왔던 것과 비슷한, 숫자를 이용한 인덱싱방식이다. 이 외 `Vocab`과 `Lexeme`은 단어를 인코딩하는 방식인데, 본 지면의 목적과 다르므로 이후 필요하면 서술하기로 한다. 우리가 다루고자 하는 task에서 기억해야 할 건, 우리가 주로 사용할 함수는 주로 `Doc` 객체 수준에서 다뤄진다는 점이다. 그렇다면 `Doc` 객체는 어떻게 만들어지는가?
 
-![img2]https://spacy.io/pipeline-7a14d4edd18f3edfee8f34393bff2992.svg
+![img2](https://spacy.io/pipeline-7a14d4edd18f3edfee8f34393bff2992.svg)
+
+일차적으로 spaCy는 문서 그 자체를 있는 그대로 `Doc`으로 만들어주는, 따라서 tokenization 등(이러한 전처리 과정을 spaCy는 `pipeline`이라 칭한다)이 아직 실행되지 않은 `English` 클래스를 가진다. 그리고 `en_core_web_sm`처럼 spaCy가 나름대로 제작하여 배포하고 있는  [언어 모델](https://spacy.io/models)이 있다. 이를 불러와서 문서를 `Doc`로 만드는 코드는 다음과 같다.
+
+```python
+from spacy.lang.en import English
+
+example = 'This is a sentence.'
+nlp = English()     # Doc을 만들기 위한 pipeline 불러오기
+doc = nlp(example)   # 실행
+```
+
+이런 방식으로 `Doc` 객체를 만들고, 이후에 여러 함수를 적용할 수 있다. 물론 `pipeline`이라는 이름이 암시하듯이 여러 전처리 과정을 `nlp`에 추가할 수도 있으며 spaCy의 API 소개란은 두 가지 방식을 모두 다루고 있다.
+
+앞서 언급했듯이 `English` 클래스는 원래의 문서를 그대로 입력으로 받기에 이를 통해 자기 자신만의 `pipeline`을 제작할 수 있으며, tokenization같은 아주 기초적인 전처리 과정이 아니라 NER, POS tagging 등 이차적인 작업을 수행하는 데 목적이 있다면 `en_core_web_sm` 같은 자체 모델을 불러오는 것도 나쁘지 않다. (각 모델의 소개와 성능 비교는 [다음 링크](https://spacy.io/models/en). 아쉽게도 한국어는 지원하지 않는다.)
+
+## 3. LexNLP
+
 
 
 
