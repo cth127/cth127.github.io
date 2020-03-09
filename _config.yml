@@ -99,7 +99,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "custom"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
     anonymize_ip         : # true, false (default)
@@ -113,7 +113,7 @@ author:
   location         : "Seoul"
   email            : "saajacha@gmail.com"
   links:
-    - label: "Email"
+    - label: "saajacha@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
       # url: mailto:your.name@email.com
     - label: "Website"
