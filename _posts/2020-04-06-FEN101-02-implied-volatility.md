@@ -2,6 +2,7 @@
 title: "FEN101 - 02 Implied Volatility of KOSPI200 Call Option"
 date: 2020-04-06
 categories: FEN101, Pricing
+use_math: true
 ---
 
 # 1. Intro
@@ -10,10 +11,11 @@ categories: FEN101, Pricing
 
 - 주가는 geometric Brownian motion을 따르며, Ito's lemma를 적용한다. 즉, 
 
-$$$S \left( t+dt \right)=S \left( t \right) \exp \left[ \left( r- {\sigma ^2 \over 2} \right) dt + \sigma \sqrt{dt}Z \right], where Z \sim N(0, 1)$$$
+$$S \left( t+dt \right)=S \left( t \right) \exp \left[ \left( r- {\sigma ^2 \over 2} \right) dt + \sigma \sqrt{dt}Z \right], where Z \sim N(0, 1)$$
 
 의 과정을 따른다. 관련해서는 확률미적분학과 확률론 관련 포스팅에서 다룬다.
-- 이에 필요한 변수로 $$r=0.011$$(4월 3일자 3개월 CD금리), $$S(1)=231.7$$(4월 3일자 KOSPI 200 종가), $$dt= {1\over365}$$(365일간 변동한다고 가정)으로 설정한다.
+
+- 이에 필요한 변수로 $r=0.011$(4월 3일자 3개월 CD금리), $S(1)=231.7$(4월 3일자 KOSPI 200 종가), $dt= {1\over365}$(365일간 변동한다고 가정)으로 설정한다.
 - Z값을 일관성있게 정하기 위해 random seed는 3으로 설정한다.
 
 # 2. MCS
