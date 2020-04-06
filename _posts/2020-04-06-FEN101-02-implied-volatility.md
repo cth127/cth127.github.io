@@ -46,7 +46,7 @@ mean(x)
 
 # 3. Implied Volatility
 
-그럼 이제 본격적으로 call option의 implied volatility를 구해보자. volatility를 0.200에서 0.400사이 소숫점 3자리를 단위로 조정해가며 각각에 대해 10,000회 stock process를 진행하여 그 평균을 결과값으로 얻는다. 이에 대해 각 옵션의 strike price의 차를 구하여 payoff의 기댓값을 구하고, 이를 옵션의 시장가와 비교하여 MSE를 구한다. 비교 대상이 되는 5월 만기 KOSPI200 call option의 시장가는 다음과 같다.
+그럼 이제 본격적으로 call option의 implied volatility를 구해보자. volatility를 0.000에서 1.000사이 소숫점 2자리를 단위로 조정해가며 각각에 대해 10,000회 stock process를 진행하여 그 평균을 결과값으로 얻는다. 이에 대해 각 옵션의 strike price의 차를 구하여 payoff의 기댓값을 구하고, 이를 옵션의 시장가와 비교하여 MSE를 구한다. 비교 대상이 되는 5월 만기 KOSPI200 call option의 시장가는 다음과 같다.
 
 |Strike Price|Market Price|
 |---|---|---|
@@ -73,27 +73,38 @@ mean(x)
 그럼 코드를 구성해보자.
 
 ```(matlab)
-clear; randn('seed',3); hold;
+clear; randn('seed',3);
 S(1) = 231.7; r = 0.011;
 T=1; N=365; dt=T/N;
-Nt = datenum(2020,5,14)-datenum(2020,4,3)
+Nt = datenum(2020,5,14)-datenum(2020,4,3);
 t=linspace(0,dt*Nt,Nt+1);
 
 X = linspace(210, 252.5, 18); %208~254 사이만
 op=[26.75 25.15 19.20 20.90 19.70 18.10 15.30 13.75 13.10... 
     11.60 10.20 9.00 7.60 6.83 5.68 4.96 4.00 3.50];
-vol=linspace(0.200, 0.400, 201);
+vol=linspace(0, 1, 101);
 
-for i=1:10000
-    Z=randn(1,Nt);
-    for j=1:201
+for i=1:101
+    for j=1:10000
+        Z=randn(1,Nt);
         for k=1:Nt
-            S(k+1) = S(k) * exp(( r - 1/2 * vol(j)^2 )...
-            * dt + vol(j) * Z( k ) * sqrt( dt ));
+            S(k+1) = S(k) * exp(( r - 1/2 * vol(i)^2 )...
+            * dt + vol(i) * Z( k ) * sqrt( dt ));
         end
-        x(j) = S(end);
-
+        res(j) = S(end);
+    theory_price = max(X - mean(res), 0) * exp(-r * dt * Nt); %현재가치로 할인
+    mse(i) = mean((theory_price - op).^2);
+    end
 end
 
+[argval argmin] = min(mse);
+ans = vol(argmin)
 
+% 그래프로 확인하기
+clf;
+plot(vol, mse, '-');
+xlabel('Vol'); ylabel('MSE');
 ```
+그 결과 MSE를 가장 작게 만드는 volatility 값은 0.74로 계산되었다. 다음은 Vol에 따른 MSE의 그래프이다.
+
+![mse](https://github.com/cth127/cth127.github.io/blob/master/FEN101/mse_vol.jpg?raw=true)
