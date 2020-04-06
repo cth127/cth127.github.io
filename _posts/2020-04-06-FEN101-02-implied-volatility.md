@@ -9,16 +9,16 @@ categories: FEN101, Pricing
 코로나로 인해 급변하는 주식 시장에서 2020년 5월이 만기인(5월 14일) KOSPI200 call option 가격을 통해 implied volatility를 구하고자 한다. 몬테카를로 시뮬레이션(MCS)을 통해 각 volatility에 따른 KOSPI200의 경로를 10만회 생성하고, 그 결과값을 통해 옵션의 이론가를 구한 뒤, 실제 가격과 MSE를 구해 이를 최소화하는 volatility를 찾으려 한다. 다음은 이 과정에서 필요한 몇 가지 전제이다.
 
 - 주가는 geometric Brownian motion을 따르며, Ito's lemma를 적용한다. 즉, 
-$$ \left( t+dt \right)=S \left( t \right) \exp \left[ \left( r-\sigma^2 \over 2 \right) dt + sigma \sqrt{dt}Z \right], Z ~ N(0, 1) $$
+$$\left( t+dt \right)=S \left( t \right) \exp \left[ \left( r-\sigma^2 \over 2 \right) dt + sigma \sqrt{dt}Z \right], Z ~ N(0, 1)$$
 의 과정을 따른다. 관련해서는 확률미적분학과 확률론 관련 포스팅에서 다룬다.
-- 이에 필요한 변수로 $$ r = 0.011 $$ (4월 3일자 3개월 CD금리), $$ S(1) = 231.7 $$ (4월 3일자 KOSPI 200 종가), $$ dt = 1 \over 365 $$ (365일간 변동한다고 가정)으로 설정한다.
+- 이에 필요한 변수로 $$r=0.011$$(4월 3일자 3개월 CD금리), $$S(1)=231.7$$(4월 3일자 KOSPI 200 종가), $$dt=1 \over 365$$(365일간 변동한다고 가정)으로 설정한다.
 - Z값을 일관성있게 정하기 위해 random seed는 3으로 설정한다.
 
 # 2. MCS
 
 위 식을 구현하는 매트랩 코드는 다음과 같다. 일단 volatility는 임의의 값인 0.3으로 설정하자. 시뮬레이션을 실행하기 위한 for loop는 100번만 돌린다.
 
-'''(matlab)
+```(matlab)
 clear; clf; randn('seed',3); hold;
 S(1) = 231.7; r = 0.011; vol = 0.3;
 T=1; N=365; dt=T/N;
@@ -35,7 +35,7 @@ for k=1:100
 end
 xlabel('time'); ylabel('KOSPI200');
 mean(x)
-'''
+```
 
 이렇게 생성한 주가 경로를 플롯으로 그리면 다음과 같다.
 
