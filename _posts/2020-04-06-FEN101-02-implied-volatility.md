@@ -92,7 +92,7 @@ for i=1:101
             * dt + vol(i) * Z( k ) * sqrt( dt ));
         end
         res(j) = S(end);
-    theory_price = max(X - mean(res), 0) * exp(-r * dt * Nt); %현재가치로 할인
+    theory_price = max(mean(res) - X, 0) * exp(-r * dt * Nt); %현재가치로 할인
     mse(i) = mean((theory_price - op).^2);
     end
 end
