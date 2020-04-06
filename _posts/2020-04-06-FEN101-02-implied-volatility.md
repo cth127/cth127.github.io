@@ -10,7 +10,7 @@ categories: FEN101, Pricing
 
 - 주가는 geometric Brownian motion을 따르며, Ito's lemma를 적용한다. 즉, 
 
-$$\left( t+dt \right)=S \left( t \right) \exp \left[ \left( r- \sigma ^2 \over 2 \right) dt + \sigma \sqrt{dt}Z \right], Z \sim N(0, 1)$$
+$$S \left( t+dt \right)=S \left( t \right) \exp \left[ \left( r- \sigma ^2 \over 2 \right) dt + \sigma \sqrt{dt}Z \right], Z \sim N(0, 1)$$
 
 의 과정을 따른다. 관련해서는 확률미적분학과 확률론 관련 포스팅에서 다룬다.
 - 이에 필요한 변수로 $r=0.011$(4월 3일자 3개월 CD금리), $S(1)=231.7$(4월 3일자 KOSPI 200 종가), $dt=1 \over 365$(365일간 변동한다고 가정)으로 설정한다.
