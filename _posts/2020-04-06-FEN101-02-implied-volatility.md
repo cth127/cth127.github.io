@@ -87,16 +87,19 @@ op=[26.75 25.15 19.20 20.90 19.70 18.10 15.30 13.75 13.10...
 vol=linspace(0, 1, 101);
 
 for i=1:101
-    for j=1:10000
-        Z=randn(1,Nt);
-        for k=1:Nt
-            S(k+1) = S(k) * exp(( r - 1/2 * vol(i)^2 )...
-            * dt + vol(i) * Z( k ) * sqrt( dt ));
+    for v=1:18
+        for j=1:10000
+            Z=randn(1,Nt);
+            for k=1:Nt
+                S(k+1) = S(k) * exp(( r - 1/2 * vol(i)^2 )...
+                * dt + vol(i) * Z( k ) * sqrt( dt ));
+            end
+            res(j) = S(end);
         end
-        res(j) = S(end);
-    theory_price = max(mean(res) - X, 0) * exp(-r * dt * Nt); %현재가치로 할인
-    mse(i) = mean((theory_price - op).^2);
+        theory_price = mean(max(res - X(v), 0)) * exp(-r * dt * Nt); %현재가치로 할인
+        se(v) = (theory_price - op(v)).^2;
     end
+    mse(i) = mean(se);
 end
 
 [argval argmin] = min(mse);
@@ -107,6 +110,6 @@ clf;
 plot(vol, mse, '-');
 xlabel('Vol'); ylabel('MSE');
 ```
-그 결과 MSE를 가장 작게 만드는 volatility 값은 0.74로 계산되었다. 다음은 Vol에 따른 MSE의 그래프이다.
+그 결과 MSE를 가장 작게 만드는 volatility 값은 0.37로 계산되었다. 다음은 Vol에 따른 MSE의 그래프이다.
 
-![mse](https://github.com/cth127/cth127.github.io/blob/master/FEN101/mse_volume.jpg?raw=true)
+![mse](https://github.com/cth127/cth127.github.io/blob/master/FEN101/vol_mse.jpg?raw=true)
