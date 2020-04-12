@@ -52,14 +52,16 @@ Volatility Frown(울상)은 smile과 반대되는 형태로, 주로 기초자산
 우리가 목표로 하는 옵션의 행사가는 210~254 사이의 범주에 있고, vol은 퍼센트로 표시되므로 0~1 사이의 값을 가진다고 가정한다. 즉 다음과 같은 연립부등식이 성립한다.
 
 $$ 0 \le 210a+b \ge 1 $$
+
 $$ 0 \le 254a+b \ge 1 $$
 
 이를 풀면 다음과 같은 범위를 얻을 수 있다.
 
-$$ - {1 \over 44} \le a \ge {1 \over 44} $$
-$$ - {254 \over 44} \le b \ge 1 + {254 \over 44} \text{broadly, but dependent on 'a'} $$
+$$ - {1 \over 44} \le a \le {1 \over 44} $$
 
-그럼 이 사이 범위에서, 하지만 vol이 0~1 범위에서 넘어가지 않도록 조정해가며 비용함수 그래프의 모양을 파악해보도록 하자. 저번처럼 구간을 100개씩 나누고 몬테카를로 시뮬레이션 실행수를 10000번으로 하면 너무 많으니 그 수를 50, 1000으로 줄여서 시행한다.
+$$ - {254 \over 44} \le b \le 1 + {254 \over 44}   \text{broadly, but dependent on 'a'} $$
+
+그럼 이 사이 범위에서, 하지만 vol이 0~1 범위에서 넘어가지 않도록 조정해가며 비용함수 그래프의 모양을 파악해보도록 하자. 저번처럼 구간을 100개씩 나누고, 몬테카를로 시뮬레이션 실행수를 10000번으로 하면 너무 많으니 그 수를 1000으로 줄여서 시행한다.
 
 ```(matlab)
 clear; randn('seed',3);
@@ -75,8 +77,8 @@ op = [26.75 25.15 19.20 20.90 19.70 18.10 15.30 13.75 13.10...
 a = linspace(-1/44, 1/44, 51);
 b = linspace(-254/44, 1+254/44, 51);
 
-for i=1:51
-    for j=1:51
+for i=1:101
+    for j=1:101
         if 210*a(i) + b(j) >= 0 & 254*a(i) + b(j) >= 0 &...
            210*a(i) + b(j) <= 1 & 254*a(i) + b(j) <= 1 
             for k=1:18
@@ -94,13 +96,90 @@ for i=1:51
             end
             mse(i, j) = mean(se);
         else
-            mse(i,j) = 999;
+            mse(i,j) = 299;
         end
     end
 end
 
-% 그래프로 확인하기
+% mse 분포 그래프로 확인
 clf;
-contour3(mse);
-xlabel('Slope'); ylabel('Intercept'); zlabel('MSE');
+hist(mse)
+xlabel('Freq'); ylabel('MSE');
 ```
+
+![mse_freq](https://github.com/cth127/cth127.github.io/blob/master/FEN101/mse_freq.jpg?raw=true)
+
+mse의 분포를 포면 대부분의 값에서 if문을 충족시키지 못하는, 즉 vol 값이 0 이하이거나 1 이상이어서 지정된 299의 값을 받았다. 우리가 관심있을만한 값은 0~30 사이이다. 이를 나눠 등고선을 그려보면 다음과 같다.
+
+```(matlab)
+% a, b값에 따른 mse값 등고선 그래프로 확인
+clf;
+contourf(mse, [5, 10, 15, 20, 25, 30]);
+xlabel('Slope Index'); ylabel('Intercept Index'); zlabel('MSE');
+colorbar;
+
+[argval_temp argmin_temp] = min(mse);
+[argval argmin_j] = min(min(mse));
+argmin_i = argmin_temp(argmin_j);
+min_a = a(argmin_i)
+min_b = b(argmin_j)
+```
+
+![mse_cont](https://github.com/cth127/cth127.github.io/blob/master/FEN101/mse_cont.jpg?raw=true)
+
+확대한 그래프긴 하지만 가장 진한 파란색 값이 있는 부근에서 mse가 최소가 된다는 걸 알 수 있다. mse가 최소가 되는 값을 확인한 결과 a는 0, b는 0.3745로 확인되었다. 지난번에 구했던 상수 vol값인 0.37에 매우 근접한 값이다. 이제 이 점을 초기값으로 하여 경사하강법을 시행, 더 정교한 값을 얻어보자. 코딩의 편의를 위해 mse를 구하는 함수를 sigval이라는 함수로 저장하여 활용했다.
+
+```(matlab)
+function val=sigval(s)
+randn('seed',3);
+S(1) = 231.7; r = 0.011;
+T=1; N=365; dt=T/N;
+Nt = datenum(2020,5,14)-datenum(2020,4,3);
+t=linspace(0,dt*Nt,Nt+1);
+
+X = linspace(210, 252.5, 18); %208~254 사이만
+op=[26.75 25.15 19.20 20.90 19.70 18.10 15.30 13.75 13.10... 
+    11.60 10.20 9.00 7.60 6.83 5.68 4.96 4.00 3.50];
+mat = X;
+mat(2,:) = 1;
+mat = transpose(mat);
+vol = mat * s;
+
+    for v=1:18
+        for j=1:10000
+            Z=randn(1,Nt);
+            for k=1:Nt
+                S(k+1) = S(k) * exp(( r - 1/2 * vol(v)^2 )...
+                * dt + vol(v) * Z( k ) * sqrt( dt ));
+            end
+            res(j) = S(end);
+        end
+        theory_price = mean(max(res - X(v), 0)) * exp(-r * dt * Nt); %현재가치로 할인
+        se(v) = (theory_price - op(v)).^2;
+    end
+    val = sqrt(mean(se));
+end
+
+clear; clf; hold on;
+v(:,1) = [0 ; 0.3745];
+da = 1.0e-6; db = 1.0e-4; rate = 1.0e-8; 
+k=1; tol=1.0e-8; err=2*tol;
+
+while err>tol
+    mse(k) = sigval(v(:,k));
+    v(1,k+1)=v(1,k)-rate*(sigval(v(:,k)+[da ; 0])-mse(k))/da;
+    v(2,k+1)=v(2,k)-rate*(sigval(v(:,k)+[0 ; db])-mse(k))/db;
+    err=abs(mean(v(:,k+1)-v(:,k)));
+    k=k+1;
+end
+
+ans = v(:,end)
+```
+
+그 결과 mse는 1.0846에서 1.0839로 줄었지만, 눈에 띄는 차이는 보이지 않았다. 즉 작은 소수점 차이는 있었겠지만, 앞서 구한 a=0, b=0.3745 에서 크게 벗어나지 않았다. 즉 상수 vol에 가까운 것이다. 혹시 초기값의 문제인가 싶어 변수를 바꿔가벼 실험해보았으나 mse는 위 값에서 가장 작게 나타났다. 반복문이 돌아간 수 k 대 mse 그래프는 다음과 같았다.
+
+![mse_final](https://github.com/cth127/cth127.github.io/blob/master/FEN101/final_mse.jpg?raw=true)
+
+# 4. Outro
+
+아쉽게도 앞서 설명한 volatility smile의 구조를 파악하는데는 실패했다. 하지만 데이터가 그렇다고 하니 조작을 할 수도 없는 노릇 아니겠는가?
