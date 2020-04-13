@@ -22,7 +22,7 @@ $$S \left( t+dt \right)=S \left( t \right) \exp \left[ \left( r- {\sigma ^2 \ove
 
 위 식을 구현하는 매트랩 코드는 다음과 같다. 일단 volatility는 임의의 값인 0.3으로 설정하자. 예시일 뿐이므로 시뮬레이션을 실행하기 위한 for loop는 100번만 돌린다.
 
-```(matlab)
+```matlab
 clear; clf; randn('seed',3); hold;
 S(1) = 231.7; r = 0.011; vol = 0.3;
 T=1; N=365; dt=T/N;
@@ -74,7 +74,7 @@ mean(x)
 
 그럼 코드를 구성해보자.
 
-```(matlab)
+```matlab
 clear; randn('seed',3);
 S(1) = 231.7; r = 0.011;
 T=1; N=365; dt=T/N;
