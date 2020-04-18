@@ -1,5 +1,5 @@
 ---
-title: "NLP - 01 spaCy & LexNLP"
+title: "NLP - 02 spaCy & LexNLP"
 date: 2020-02-19
 categories: NLP
 ---
