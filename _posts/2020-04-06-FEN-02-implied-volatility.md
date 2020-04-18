@@ -1,7 +1,8 @@
 ---
 title: "FEN - 02 Implied Volatility of KOSPI200 Call Option"
 date: 2020-04-06
-categories: FEN Pricing
+categories: FEN
+tags: Pricing
 use_math: true
 ---
 
