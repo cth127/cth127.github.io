@@ -1,5 +1,5 @@
 ---
-title: "NLP - 00 Intro"
+title: "NLP - 01 Comparison of NLP Libraries"
 date: 2020-02-16
 categories: NLP
 ---
