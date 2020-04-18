@@ -1,7 +1,7 @@
 ---
-title: "NLP101 - 01 spaCy & LexNLP"
+title: "NLP - 01 spaCy & LexNLP"
 date: 2020-02-19
-categories: NLP101
+categories: NLP
 ---
 
 ## 1. Intro
