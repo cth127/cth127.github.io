@@ -1,7 +1,7 @@
 ---
-title: "FEN101 - 01 Simple Research on Metallgesellschaft case"
+title: "FEN - 01 Simple Research on Metallgesellschaft case"
 date: 2020-03-30
-categories: FEN101 Risk
+categories: FEN Risk
 ---
 
 1991년, Metallgesellschaft의 자회사인 Metallgesellschaft Refining and Marketing(이하 MRGM)은 고객들을 대상으로 향후 5-10년 간 고정된 가격으로 중유와 휘발유를 납품하는 일종의 스왑 계약을 맺었다. 이 계약에서 납품 가격은 각 상품의 당시 12개월물 선물가에 배럴 당 3-5$ 가량의 프리미엄을 붙여 매겨졌으며, MGRM은 이를 통해 원유 가격이 하락해도 같은 가격에 상품을 납품함으로써 가격 하락 리스크를 방지할 수 있었다. 하지만 그 반대급부로 만약 원유 가격이나 상품 가격이 상승에 대한 리스크엔 노출될 수밖에 없었다.
