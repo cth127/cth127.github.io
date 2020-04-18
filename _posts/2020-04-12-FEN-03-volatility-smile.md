@@ -1,7 +1,7 @@
 ---
 title: "FEN - 03 Volatility Smile of KOSPI200 Call Option"
 date: 2020-04-12
-categories: FEN101 Pricing
+categories: FEN Pricing
 use_math: true
 ---
 
