@@ -1,7 +1,8 @@
 ---
 title: "FEN - 04 Contango & Normal Backwardation "
 date: 2020-04-15
-categories: FEN Pricing
+categories: FEN
+tags: Pricing
 ---
 
 # 1. Contango and Normal Backwardation
