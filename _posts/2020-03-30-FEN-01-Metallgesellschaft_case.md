@@ -1,7 +1,8 @@
 ---
 title: "FEN - 01 Simple Research on Metallgesellschaft case"
 date: 2020-03-30
-categories: FEN Risk
+categories: FEN
+tags: Risk
 ---
 
 # 1. Metallgesellschaft
