@@ -63,7 +63,8 @@ $s.t.\ \mu_{\mathcal{A}}(A_i)<\infty\ \&\ \bigcup_{i=1}^{\infty}A_i=\Omega$이 �
 
 1. Stieltjes measure function : 함수 $F:\mathbb{R}\rightarrow\mathbb{R}$가 다음 두 조건,
 	- $F\text{ is nondecreasing}$
-	- $F\text{ is right continuous, }i.e.\ x_i\to x^+ \Rightarrow \lim_{i\to\infty}F(x_i)=F(x)$  
+	- $F\text{ is right continuous, }$  
+	  $i.e.\ x_i\to x^+ \Rightarrow \lim_{i\to\infty}F(x_i)=F(x)$  
 을 만족시킬 때, 함수 $F$를 'Stieltjes measure function'이라 한다.
 
 1. 'Lebeque measure' : 임의의 Stieltjes measure function $F$에 대해 measurable space ($\mathbb{R}, \mathcal{R}$)에서 정의된 measure $\mu\ s.t.\ \mu((a,b]) = F(b) - F(a)$가 유일하게 존재한다. 이때 $F(x) = x$이면 measure $\mu((a,b]) = b - a$를 'Lebeque measure'라 한다.
