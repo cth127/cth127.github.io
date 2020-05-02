@@ -57,7 +57,7 @@ $\text{ for pairwise disjoint }A_i,\ i=1,2...$
 을 만족하시킬 때, 함수 $\mu_\mathcal{A}$를 'measure on algebra'라 한다.
 
 1. $\sigma$-finite : measure on algebra $\mathcal{A}$, $\mu_{\mathcal{A}}$에 대해 수열 $A_i \in \mathcal{A}$  
-$s.t.\ \mu_{\mathcal{A}}(A_i)\ <\ \infty \& \bigcup_{i=1}^{\infty}A_i=\Omega$이 존재하면 $\mu_\mathcal{A}$가 $\sigma$-finite하다고 한다.
+$s.t.\ \mu_{\mathcal{A}}(A_i)<\infty\ \&\ \bigcup_{i=1}^{\infty}A_i=\Omega$이 존재하면 $\mu_\mathcal{A}$가 $\sigma$-finite하다고 한다.
 
 1.  the Borel $\sigma$-field : 실수 집합 $\mathbb{R}$의 모든 열린 부분집합을 포함하는 $\sigma$-field를 'Borel $\sigma$-field'라 하고, $\mathcal{B}(\mathbb{R})$, 또는 $\mathcal{R}$로 쓴다.
 
