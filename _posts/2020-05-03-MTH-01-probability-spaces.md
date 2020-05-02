@@ -33,4 +33,4 @@ use_math: true
 	- $\mathbb{P}(\Omega) = 1$  
 을 만족시킬 때, 함수 $\mathbb{P}$를 'probability'라 한다.
 
-1. spaces : 위의 기호를 차용했을 때 ($\omega, \mathcal{F}$)를 'measurable space', ($\omega, \mathcal{F}, \mu$)를 'measure space',  ($\omega, \mathcal{F}, \mathbb{P}$)를 'probability space'라 한다.
+1. spaces : 위의 기호를 차용했을 때 ($\Omega, \mathcal{F}$)를 'measurable space', ($\Omega, \mathcal{F}, \mu$)를 'measure space',  ($\Omega, \mathcal{F}, \mathbb{P}$)를 'probability space'라 한다.
