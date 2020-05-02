@@ -23,9 +23,9 @@ use_math: true
 을 만족시킬 떄 $\mathcal{F}$을 '$\sigma$-algebra'라 한다.
 1. measure : $\sigma$-algebra $\mathcal{F}$에서 양의 실수로 가는 함수 $\mu : \mathcal{F} \rightarrow [0, \infty)$가 다음의 두 조건, 
 	- $\mu(\text{A}) \geq \mu(\phi) = 0,\ \forall A \in \mathcal{F}$ (non-negativity)
-	- A_n \in \mathcal{F},\ n=1,2...,\ A_n\ are\ pairwise\ disjoint \Rightarrow \mu(\bigcup_{n=1}^{\infty}A_n) = \sum_{n=1}^{\infty} \mu(A_n)$ (countable additivity)
+	- $A_n \in \mathcal{F},\ n=1,2...,\ A_n\ are\ pairwise\ disjoint \Rightarrow \mu(\bigcup_{n=1}^{\infty}A_n) = \sum_{n=1}^{\infty} \mu(A_n)$ (countable additivity)
 을 만족시킬 때, 함수 $\mu$를 'measure'라 한다.
 1. probability :  sample space $\Omega$와 그 $\sigma$-algebra $\mathcal{F}$에 대해, measure $\mathbb{P} : \mathcal{F} \rightarrow [0, 1]$(codomain이 다름에 주의!)가 다음의 한 조건,
-	- $\mathbb{P}(\omega) = 1$
+	- $\mathbb{P}(\Omega) = 1$
 을 만족시킬 때, 함수 $\mathbb{P}$를 'probability'라 한다.
-1. spaces : 위의 기호를 차용했을 때 ($\omega, \mathcal{F}$)를 'measurable space', ($\omega, \mathcal{F}, \mu$)를 'measure space',  ($\omega, \mathcal{F}$, \mathbb{P)를 'probability space'라 한다.
+1. spaces : 위의 기호를 차용했을 때 ($\omega, \mathcal{F}$)를 'measurable space', ($\omega, \mathcal{F}, \mu$)를 'measure space',  ($\omega, \mathcal{F}, \mathbb{P}$)를 'probability space'라 한다.
