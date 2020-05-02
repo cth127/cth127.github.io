@@ -39,28 +39,28 @@ use_math: true
 이러한 주개념을 전개하기 위해 다음과 같은 개념들 또한 필요하다.
 
 1. semi-algebra : 집합들의 모임 $\mathcal{S}$이 다음 세 조건,
-- $\phi \in \mathcal{S}$
-- $S, T \in \mathcal{S} \Rightarrow S \cap T \in \mathcal{S}$
-- $S \in \mathcal{S} \Rightarrow S^c\text{ is a finite disjoint union of sets of } \mathcal{S}  
+	- $\phi \in \mathcal{S}$
+	- $S, T \in \mathcal{S} \Rightarrow S \cap T \in \mathcal{S}$
+	- $S \in \mathcal{S} \Rightarrow S^c\text{ is a finite disjoint union of sets of } \mathcal{S}  
 을 만족시킬 때, $\mathcal{S}$를 'semi-algebra'라 한다.
 
 1. algebra : 집합들의 보임 $\mathcal{A}$이 다음의 세 조건,
-- $\phi \in \mathcal{A}$
-- $A, B \in \mathcal{A} \Rightarrow A \cup B \in \mathcal{A}$
-- $A \in \mathcal{A} \Rightarrow A^c \in \mathcal{A}  
+	- $\phi \in \mathcal{A}$
+	- $A, B \in \mathcal{A} \Rightarrow A \cup B \in \mathcal{A}$
+	- $A \in \mathcal{A} \Rightarrow A^c \in \mathcal{A}  
 을 만족시킬 때, $\mathcal{A}$를 'algebra'라 한다.
 
 1. measure on algebra : algebra $\mathcal{A}$에 대해 함수 $\mu_\mathcal{A} : \mathcal{A} \rightarrow [0, \infty)$가 다음 두 조건,
-- $\mu_\mathcal{A}(A) \geq \mu_\mathcal{A}(\phi) = 0,\ \forall A \in \mathcal{A}$
-- $\bigcup_{i=1}^{\infty}(A_i) \in \mathcal{A} \Rightarrow \mu_\mathcal{A}(\bigcup_{i=1}^{\infty}(A_i)) = \sum_{i=1}^{\infty}\mu_\mathcal{A}(A_i)$  
+	- $\mu_\mathcal{A}(A) \geq \mu_\mathcal{A}(\phi) = 0,\ \forall A \in \mathcal{A}$
+	- $\bigcup_{i=1}^{\infty}(A_i) \in \mathcal{A} \Rightarrow \mu_\mathcal{A}(\bigcup_{i=1}^{\infty}(A_i)) = \sum_{i=1}^{\infty}\mu_\mathcal{A}(A_i)$  
 $\text{ for pairwise disjoint }A_i,\ i=1,2...$  
 을 만족하시킬 때, 함수 $\mu_\mathcal{A}를 'measure on algebra'라 한다.
 
 1.  the Borel $\sigma$-field : 실수 집합 $\mathbb{R}$의 모든 열린 부분집합을 포함하는 $\sigma$-field를 'Borel $\sigma$-field'라 하고, $\mathcal{B}(\mathbb{R})$, 또는 $\mathcal{R}$로 쓴다.
 
 1. Stieltjes measure function : 함수 $F:\mathbb{R}\rightarrow\mathbb{R}$가 다음 두 조건,
-- $F\ is\ nondecreasing$
-- $F\ is\ right\ continuous,\ i.e.\ x_i\to x^+ \Rightarrow \lim_{i\to\infty}F(x_i)=F(x)$  
+	- $F\ is\ nondecreasing$
+	- $F\ is\ right\ continuous,\ i.e.\ x_i\to x^+ \Rightarrow \lim_{i\to\infty}F(x_i)=F(x)$  
 을 만족시킬 때, 함수 F를 'Stieltjes measure function'이라 한다.
 
 1. 'Lebeque measure' : 임의의 Stieltjes measure function $F$에 대해 measurable space ($mathbb{R}, \mathcal{R}$)에서 정의된 measure $\mu\ s.t.\ \mu((a,b]) = F(b) - F(a)$가 유일하게 존재한다. 이때 $F(x) = x$이면 measure $\mu((a,b]) = b - a$를 'Lebeque measure'라 한다.
