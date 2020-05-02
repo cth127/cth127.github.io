@@ -20,7 +20,7 @@ use_math: true
 	- $\phi \in \mathcal{F}$
 	- $A \in \mathcal{F} \Rightarrow  A^c \in \mathcal{F}$
 	- $A_n \in \mathcal{F},\  n = 1, 2... \Rightarrow \bigcup_{n=1}^{\infty}A_n \in \mathcal{F}$
-을 만족시킬 떄 $\mathcal{F}$을 '$\sigma$-algebra'라 한다.
+\n을 만족시킬 떄 $\mathcal{F}$을 '$\sigma$-algebra'라 한다.
 1. measure : $\sigma$-algebra $\mathcal{F}$에서 양의 실수로 가는 함수 $\mu : \mathcal{F} \rightarrow [0, \infty)$가 다음의 두 조건, 
 	- $\mu(\text{A}) \geq \mu(\phi) = 0,\ \forall A \in \mathcal{F}$ (non-negativity)
 	- $A_n \in \mathcal{F},\ n=1,2...,\ A_n\ are\ pairwise\ disjoint$ $\Rightarrow \mu(\bigcup_{n=1}^{\infty}A_n) = \sum_{n=1}^{\infty} \mu(A_n)$ (countable additivity)
