@@ -54,7 +54,7 @@ use_math: true
 	- $\mu_\mathcal{A}(A) \geq \mu_\mathcal{A}(\phi) = 0,\ \forall A \in \mathcal{A}$
 	- $\bigcup_{i=1}^{\infty}(A_i) \in \mathcal{A} \Rightarrow \mu_\mathcal{A}(\bigcup_{i=1}^{\infty}(A_i)) = \sum_{i=1}^{\infty}\mu_\mathcal{A}(A_i)$  
 $\text{ for pairwise disjoint }A_i,\ i=1,2...$  
-을 만족하시킬 때, 함수 $\mu_\mathcal{A}$를 'measure on algebra'라 한다.
+을 만족시킬 때, 함수 $\mu_\mathcal{A}$를 'measure on algebra'라 한다.
 
 1. $\sigma$-finite : measure on algebra $\mathcal{A}$, $\mu_{\mathcal{A}}$에 대해 수열 $A_i \in \mathcal{A}$  
 $s.t.\ \mu_{\mathcal{A}}(A_i)<\infty\ \&\ \bigcup_{i=1}^{\infty}A_i=\Omega$이 존재하면 $\mu_\mathcal{A}$가 $\sigma$-finite하다고 한다.
