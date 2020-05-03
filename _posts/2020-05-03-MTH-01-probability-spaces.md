@@ -10,7 +10,7 @@ use_math: true
 
 본 글의 목적은 확률론을 수학적으로 이해하는 것이다. 필자가 통계학과 학부에서 들었던 확률론은 직관적으로 이해 가능한 범주의 내용이었다. 하지만 수학과 대학원에서 듣는 확률론 수업(교재는 Durrett의 책)은 직관의 범주를 뛰어넘는 것이었고, 사실 아직까지 필자의 이해가 적절한 건지 잘 모르겠다. 그래서 이 글은 필자 나름의 이해를 담아 정리한 글일뿐, 정확도는 담보되지 않는다. 
 
-본 글은 어디까지나 본 블로그의 목적인, 배운 내용의 정리를 위한 글이고, 각 개념 및 theorm 사이의 큰 그림을 파악하는 데 그 목적을 두며, 개별 theorm이나 lemma 대한 세세한 증명은 링크로 대체한다. 같은 맥락에서 이야기를 풀어나가는 데 크게 유용해보이지 않는 요소는 생략될 수 있으니, 좀 더 정확한 지식을 얻고 싶다면 [Durrett 선생이 온라인 배포한 교재](https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf)를 참고하길 바란다.
+본 글은 어디까지나 본 블로그의 목적인, 배운 내용의 정리를 위한 글이고, 각 개념 및 theorm 사이의 큰 그림을 파악하는 데 그 목적을 두며, 개별 theorm이나 lemma 대한 세세한 증명은 링크, 혹은 교재의 페이지로 대체한다. 같은 맥락에서 이야기를 풀어나가는 데 크게 유용해보이지 않는 요소는 생략될 수 있으니, 좀 더 정확한 지식을 얻고 싶다면 [Durrett 선생이 온라인 배포한 교재](https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf)를 참고하길 바란다.
 
 # 2. Concept
 
@@ -61,7 +61,7 @@ $\text{ for pairwise disjoint }A_i,\ i=1,2...$
 1. $\sigma$-finite : measure on algebra $\mathcal{A}$, $\mu_{\mathcal{A}}$에 대해 수열 $A_i \in \mathcal{A}$  
 $s.t.\ \mu_{\mathcal{A}}(A_i)<\infty\ \&\ \bigcup_{i=1}^{\infty}A_i=\Omega$이 존재하면 $\mu_\mathcal{A}$가 $\sigma$-finite하다고 한다.
 
-1.  the Borel $\sigma$-field : 실수 집합 $\mathbb{R}$의 모든 열린 부분집합을 포함하는 $\sigma$-field를 'Borel $\sigma$-field'라 하고, $\mathcal{B}(\mathbb{R})$, 또는 $\mathcal{R}$로 쓴다.
+1.  the Borel $\sigma$-field : 실수 집합 $\mathbb{R}$의 모든 열린 부분집합을 포함하는 최소한의 $\sigma$-field를 'Borel $\sigma$-field'라 하고, $\mathcal{B}(\mathbb{R})$, 또는 $\mathcal{R}$로 쓴다.
 
 1. Stieltjes measure function : 함수 $F:\mathbb{R}\rightarrow\mathbb{R}$가 다음 두 조건,
 	- $F\text{ is nondecreasing}$
