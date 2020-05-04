@@ -2,7 +2,7 @@
 title: "MTH - 01 Probability Spaces (1)"
 date: 2020-05-03
 categories: MTH
-tags: PROB
+tags: Probability
 use_math: true
 ---
 
