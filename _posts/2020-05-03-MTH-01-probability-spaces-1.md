@@ -46,7 +46,7 @@ use_math: true
 	- $S \in \mathcal{S} \Rightarrow S^c\text{ is a finite disjoint union of sets of } \mathcal{S}$  
 을 만족시킬 때, $\mathcal{S}$를 'semi-algebra'라 한다.
 
-1. algebra : 집합들의 보임 $\mathcal{A}$이 다음의 세 조건,
+1. algebra : 집합들의 모임 $\mathcal{A}$이 다음의 세 조건,
 	- $\phi \in \mathcal{A}$
 	- $A, B \in \mathcal{A} \Rightarrow A \cup B \in \mathcal{A}$
 	- $A \in \mathcal{A} \Rightarrow A^c \in \mathcal{A}$  
