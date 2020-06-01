@@ -1,6 +1,6 @@
 ---
 title: "MTH - 02 Probability Spaces (2)"
-date: 2020-05-05
+date: 2020-06-01
 categories: MTH
 tags: Probability
 use_math: true
