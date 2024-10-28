@@ -5,15 +5,6 @@
     "email": "cth127@korea.ac.kr",
     "url": "https://cth127.github.io/"
   },
-  "work": [
-    {
-      "name": "Korea Telecom",
-      "position": "PhD Student Research Intern",
-      "startDate": "2023-07-01",
-      "endDate": "2023-08-31",
-      "summary": "Research to handle the hallucination problem in large language model (LLM). Build an automatized pipeline to construct hallucination dataset using ChatGPT, and a reward model to train LLM with RL. Selected as an outstanding intern."
-    }
-  ],
   "education": [
     {
       "institution": "Korea University",
@@ -32,6 +23,45 @@
       "studyType": "BA in Sociology and Cultural Critics",
       "startDate": "2012-03-01",
       "endDate": "2019-08-31"
+    }
+  ],
+  "work": [
+    {
+      "name": "Korea Telecom",
+      "position": "PhD Student Research Intern",
+      "startDate": "2023-07-01",
+      "endDate": "2023-08-31",
+      "summary": "Research to handle the hallucination problem in large language model (LLM). Build an automatized pipeline to construct hallucination dataset using ChatGPT, and a reward model to train LLM with RL. Selected as an outstanding intern."
+    }
+  ],
+  "publications": [
+    {
+      "name": "Pre-trained Language Models Return Distinguishable Probability Distributions to Unfaithfully Hallucinated Texts.",
+      "publisher": "Findings of the Association for Computational Linguistics: EMNLP 2024 (EMNLP 2024 Findings)",
+      "releaseDate": "2024-11-16",
+      "url": "https://arxiv.org/abs/2409.16658",
+      "summary": "We show the pre-trained language models return distinguishable generation probability and uncertainty distribution to unfaithfully hallucinated texts, regardless of their size and structure."
+    },
+    {
+      "name": "Evaluating Extrapolation Ability of Large Language Model in Chemical Domain.",
+      "publisher": "Language + Molecules Workshop at ACL 2024. (Lang+Moles@ACL 2024)",
+      "releaseDate": "2024-08-15",
+      "url": "https://aclanthology.org/2024.langmol-1.4/",
+      "summary": "LLM can extrapolate to new unseen material utilizing its chemical knowledge learned through massive pre-training."
+    },
+    {
+      "name": "SentenceLDA: Discriminative and Robust Document Representation with Sentence Level Topic Model",
+      "publisher": "In Proceedings of the 18th Conference of the European Chapter of the\nAssociation for Computational Linguistics (EACL 2024)",
+      "releaseDate": "2024-03-22",
+      "url": "https://aclanthology.org/2024.eacl-long.31/",
+      "summary": "We propose SentenceLDA, a sentence-level topic model. We combine modern SentenceBERT and classical LDA to extend the semantic unit from word to sentence."
+    },
+    {
+      "name": "Noun-MWP: Math Word Problems Meet Noun Answers",
+      "publisher": "In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022)",
+      "releaseDate": "2022-10-17",
+      "url": "https://aclanthology.org/2022.coling-1.338/",
+      "summary": "We introduce a new type of problems for math word problem (MWP) solvers, named Noun-MWPs, whose answer is a non-numerical string containing a noun from the problem text."
     }
   ],
   "awards": [
@@ -71,36 +101,6 @@
       "name": "Financial Risk Manager",
       "date": "2022-04-30",
       "issuer": "Global Association of Risk Professionals"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Pre-trained Language Models Return Distinguishable Probability Distributions to Unfaithfully Hallucinated Texts.",
-      "publisher": "Findings of the Association for Computational Linguistics: EMNLP 2024 (EMNLP 2024 Findings)",
-      "releaseDate": "2024-11-16",
-      "url": "https://arxiv.org/abs/2409.16658",
-      "summary": "We show the pre-trained language models return distinguishable generation probability and uncertainty distribution to unfaithfully hallucinated texts, regardless of their size and structure."
-    },
-    {
-      "name": "Evaluating Extrapolation Ability of Large Language Model in Chemical Domain.",
-      "publisher": "Language + Molecules Workshop at ACL 2024. (Lang+Moles@ACL 2024)",
-      "releaseDate": "2024-08-15",
-      "url": "https://aclanthology.org/2024.langmol-1.4/",
-      "summary": "LLM can extrapolate to new unseen material utilizing its chemical knowledge learned through massive pre-training."
-    },
-    {
-      "name": "SentenceLDA: Discriminative and Robust Document Representation with Sentence Level Topic Model",
-      "publisher": "In Proceedings of the 18th Conference of the European Chapter of the\nAssociation for Computational Linguistics (EACL 2024)",
-      "releaseDate": "2024-03-22",
-      "url": "https://aclanthology.org/2024.eacl-long.31/",
-      "summary": "We propose SentenceLDA, a sentence-level topic model. We combine modern SentenceBERT and classical LDA to extend the semantic unit from word to sentence."
-    },
-    {
-      "name": "Noun-MWP: Math Word Problems Meet Noun Answers",
-      "publisher": "In Proceedings of the 29th International Conference on Computational Linguistics (COLING 2022)",
-      "releaseDate": "2022-10-17",
-      "url": "https://aclanthology.org/2022.coling-1.338/",
-      "summary": "We introduce a new type of problems for math word problem (MWP) solvers, named Noun-MWPs, whose answer is a non-numerical string containing a noun from the problem text."
     }
   ]
 }
