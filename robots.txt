@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://cth127.github.io./sitemap.xml
+Sitemap: https://cth127.github.io/sitemap.xml
