@@ -31,7 +31,7 @@
       "position": "PhD Student Research Intern",
       "startDate": "2023-07-01",
       "endDate": "2023-08-31",
-      "summary": "Research to handle the hallucination problem in large language model (LLM). Build an automatized pipeline to construct hallucination dataset using ChatGPT, and a reward model to train LLM with RL. Selected as an outstanding intern."
+      "summary": "Researched the hallucination problem in large language models (LLM). Built an automatized pipeline to construct a hallucination dataset using ChatGPT and a reward model to train LLM with RL. Selected as an outstanding intern."
     }
   ],
   "publications": [
@@ -69,7 +69,7 @@
       "title": "AI Grand Challenge - 7nd Place",
       "date": "2023-12-08",
       "awarder": "Ministry of Science and ICT",
-      "summary": "As a team leader, designed and led the development of an open-domain, multi-hop, multi-modal,document-based report-generating system."
+      "summary": "Designed and led the development of an open-domain, multi-hop, multi-modal,document-based report-generating system. (team leader)"
     },
     {
       "title": "AI Grand Challenge Open Track - 2nd Place",
@@ -81,13 +81,13 @@
       "title": "Korean AI Competition - 4th Place",
       "date": "2022-09-01",
       "awarder": "Ministry of Science and ICT",
-      "summary": "As a team leader, developed Automatic Speech Recognition model for Korean and achieved 4th place out of 103 teams."
+      "summary": "Developed Automatic Speech Recognition model for Korean and achieved 4th place out of 103 teams. (team leader)"
     },
     {
       "title": "AI Grand Challenge",
       "date": "2021-09-01",
       "awarder": "Ministry of Science and ICT",
-      "summary": "As a team leader, developed an NLP model to solve elementary math word problems based on KLUE-RoBERTa, and we were selected for follow-up research."
+      "summary": "Developed an NLP model to solve elementary math word problems based on KLUE-RoBERTa, and we were selected for follow-up research. (team leader)"
     },
     {
       "title": "HAAFOR NLP Challenge 2020 - 3rd place",
