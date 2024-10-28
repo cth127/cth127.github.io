@@ -18,8 +18,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I’m Taehun Cha, a Ph.D. candidate in AIML. While in undergraduate school, I majored in Sociology, Cultural study, and Applied Statistics. Though I currently do not utilize most of the knowledge I learned at that time, I learned how to think, write, and communicate with people from totally different backgrounds.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+After graduation, I needed to find a way to manage my livelihood. So I learned financial engineering and was certificated as an International Financial Risk Manager. Though I currently do not utilize most of the knowledge I learned at that time (again), my curiosity about modern language models ignited at that time. Also, I’m still interested in AI applications in the financial domain.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Now I’m learning mathematics to explain the several common behaviors of LLMs rigorously. Though digging LLMs from a mathematical aspect is yet immature and challenging, I believe we, humans, need to understand how and why this works clearly, before it is adopted too deeply into our lives.
