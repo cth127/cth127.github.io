@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: PhD Candidate at Department of Mathematics, Korea University. Email - cth127 at korea dot ac dot kr.
 
 profile:
   align: right
