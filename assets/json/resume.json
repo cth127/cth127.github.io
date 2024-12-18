@@ -73,6 +73,12 @@
   ],
   "awards": [
     {
+      "title": "Concordia Contest @ Neruips 2024 - First Place",
+      "date": "2024-12-15",
+      "awarder": "Cooperative AI Foundation and Google Deepmind",
+      "summary": "Designed and developed an LLM-based AI agent which maximizes expected reward while maintaining cooperative stance."
+    },
+    {
       "title": "AI Grand Challenge - 7nd Place",
       "date": "2023-12-08",
       "awarder": "Ministry of Science and ICT",
