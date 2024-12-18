@@ -36,6 +36,13 @@
   ],
   "publications": [
     {
+      "name": "ABC3: Active Bayesian Causal Inference with Cohn Criteria in Randomized Experiments.",
+      "publisher": "In The 39th Annual AAAI Conference on Artificial Intelligence",
+      "releaseDate": "2025-02-25",
+      "url": "https://arxiv.org/abs/2412.11104",
+      "summary": "We introduce ABC3, a highly efficient active learning method for randomized experiment, with several theoretical properties."
+    },
+    {
       "name": "Pre-trained Language Models Return Distinguishable Probability Distributions to Unfaithfully Hallucinated Texts.",
       "publisher": "Findings of the Association for Computational Linguistics: EMNLP 2024 (EMNLP 2024 Findings)",
       "releaseDate": "2024-11-16",
