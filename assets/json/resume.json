@@ -46,7 +46,7 @@
       "name": "Pre-trained Language Models Return Distinguishable Probability Distributions to Unfaithfully Hallucinated Texts.",
       "publisher": "Findings of the Association for Computational Linguistics: EMNLP 2024 (EMNLP 2024 Findings)",
       "releaseDate": "2024-11-16",
-      "url": "https://arxiv.org/abs/2409.16658",
+      "url": "https://aclanthology.org/2024.findings-emnlp.738/",
       "summary": "We show the pre-trained language models return distinguishable generation probability and uncertainty distribution to unfaithfully hallucinated texts, regardless of their size and structure."
     },
     {
