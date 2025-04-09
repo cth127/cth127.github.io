@@ -14,7 +14,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-I’m Taehun Cha, a Ph.D. candidate in AIML. While in undergraduate school, I majored in Sociology, Cultural study, and Applied Statistics. Though I currently do not utilize most of the knowledge I learned at that time, I learned how to think, write, and communicate with people from totally different backgrounds.
+I’m Taehun Cha, a Ph.D. candidate in [AIML@K](https://aiml-k.github.io/) led by Prof. Donghun Lee. While in undergraduate school, I majored in Sociology, Cultural study, and Applied Statistics. Though I currently do not utilize most of the knowledge I learned at that time, I learned how to think, write, and communicate with people from totally different backgrounds.
 
 After graduation, I needed to find a way to manage my livelihood. So I learned financial engineering and was certificated as an International Financial Risk Manager. Though I currently do not utilize most of the knowledge I learned at that time (again), my curiosity about modern language models ignited at that time. Also, I’m still interested in AI applications in the financial domain.
 
