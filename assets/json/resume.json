@@ -36,6 +36,13 @@
   ],
   "publications": [
     {
+      "name": "Emergent Linear Separability of Unseen Data Points in High-dimensional Last-Layer Feature Space.",
+      "publisher": "Workshop on High-dimensional Learning Dynamics at ICML 2024",
+      "releaseDate": "2025-06-26",
+      "url": "https://openreview.net/forum?id=ZycrmjxehT",
+      "summary": "We propose a simple geometric uncertainty measure based on linear separability in the last-layer feature space of deep networks, offering a theoretically grounded and non-probabilistic approach to uncertainty quantification."
+    },
+    {
       "name": "ABC3: Active Bayesian Causal Inference with Cohn Criteria in Randomized Experiments.",
       "publisher": "In The 39th Annual AAAI Conference on Artificial Intelligence",
       "releaseDate": "2025-02-25",
