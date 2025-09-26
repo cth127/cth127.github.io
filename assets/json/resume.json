@@ -36,6 +36,13 @@
   ],
   "publications": [
     {
+      "name": "Feature Learning as a Virtual Covariance Learning.",
+      "publisher": "OPT 2025: Optimization for Machine Learning at Neurips 2025",
+      "releaseDate": "2025-09-26",
+      "url": "https://openreview.net/forum?id=hvw5FJoaWB",
+      "summary": "We introduce a novel concept, virtual update, to better understand the feature learning mechanism and propose a virtual covariance learning algorithm that greatly accelerates feature learning."
+    },
+    {
       "name": "Evaluating Generalization Capabilities of LLM-Based Agents in Mixed-Motive Scenarios Using Concordia.",
       "publisher": "The Thirty-ninth Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track",
       "releaseDate": "2025-09-19",
@@ -44,7 +51,7 @@
     },
     {
       "name": "Emergent Linear Separability of Unseen Data Points in High-dimensional Last-Layer Feature Space.",
-      "publisher": "Workshop on High-dimensional Learning Dynamics at ICML 2024",
+      "publisher": "Workshop on High-dimensional Learning Dynamics at ICML 2025",
       "releaseDate": "2025-06-26",
       "url": "https://openreview.net/forum?id=ZycrmjxehT",
       "summary": "We propose a simple geometric uncertainty measure based on linear separability in the last-layer feature space of deep networks, offering a theoretically grounded and non-probabilistic approach to uncertainty quantification."
