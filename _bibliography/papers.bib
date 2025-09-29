@@ -5,6 +5,7 @@
     booktitle = "OPT 2025: Optimization for Machine Learning",
     year = "2025",
     website = "https://openreview.net/forum?id=hvw5FJoaWB",
+    pdf = "2025/Neurips2025_Workshop_Paper.pdf",
     abstract = "Feature learning is central to the success of neural networks but remains poorly understood. Recent work proposed the Neural Feature Ansatz, which highlights alignment between learned features and $\nabla_x f$, but does not explicitly explain why and how feature learning dynamics occur. To address this, we introduce a novel concept, **virtual update**, a stochastic gradient descent (SGD) step applied to inputs and hidden states rather than parameters, i.e., $x - \gamma \nabla_x \mathcal{L}$ and $h - \gamma \nabla_h \mathcal{L}$. We theoretically show that SGD aligns network weights with the covariance structure of the virtual update. This does not result in disagreement with an actual update, as the actually updated input does not deviate far from the virtually updated input. Building on this insight, we propose the **virtual covariance learning** algorithm, which directly obtains the weight matrix that achieves the desired covariance structure. This algorithm efficiently learns effective weights within one or two epochs--whereas SGD requires $10$–$20$ epochs--with low variance and no overfitting."
 }
 
