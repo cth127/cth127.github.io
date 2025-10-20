@@ -36,6 +36,12 @@
   ],
   "publications": [
     {
+      "name": "Curse of Smoothness in Functional Neural Networks.",
+      "publisher": "IEEE Signal Processing Letters",
+      "releaseDate": "2025-10-20",
+      "summary": "We propose the 'curse of smoothness,' a novel phenomenon which hinders functional neural network optimization, theoretically and empirically."
+    },
+    {
       "name": "Feature Learning as a Virtual Covariance Learning.",
       "publisher": "OPT 2025: Optimization for Machine Learning at Neurips 2025",
       "releaseDate": "2025-09-26",
