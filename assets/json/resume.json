@@ -36,6 +36,13 @@
   ],
   "publications": [
     {
+      "name": "Consequence-Guided Information Extraction for Predicting Central Bank Communication’s Effect.",
+      "publisher": "Computational Economics",
+      "releaseDate": "2026-03-13",
+      "url": "https://link.springer.com/article/10.1007/s10614-025-11284-6",
+      "summary": "We introduce a reinforcement learning–based information extraction system that identifies influential text spans in FOMC minutes and extracts structured features to improve prediction of financial market responses to central bank communications in data-scarce settings."
+    },
+    {
       "name": "Curse of Smoothness in Functional Neural Networks.",
       "publisher": "IEEE Signal Processing Letters",
       "releaseDate": "2025-10-20",
