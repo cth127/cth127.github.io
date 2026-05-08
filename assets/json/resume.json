@@ -36,6 +36,13 @@
   ],
   "publications": [
     {
+      "name": "The Weight Gram Matrix Captures Sequential Feature Linearization in Deep Networks.",
+      "publisher": "Arxiv Preprint",
+      "releaseDate": "2026-05-08",
+      "url": "https://arxiv.org/abs/2605.06258",
+      "summary": "Simple chain rule makes the weight Gram matrix the bridge between weight and feature evolution. The Gram learns the Virtual Covariance, and captures Target Linearity, which unifies other feature learning phenomena including Neural Collapse."
+    },
+    {
       "name": "Consequence-Guided Information Extraction for Predicting Central Bank Communication’s Effect.",
       "publisher": "Computational Economics",
       "releaseDate": "2026-03-13",
