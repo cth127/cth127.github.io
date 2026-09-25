@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Candidate at Department of Mathematics, Korea University. Email - cth127 at korea dot ac dot kr.
+subtitle: PhD in Mathematics. Email - cth127 at korea dot ac dot kr.
 
 profile:
   align: right
@@ -14,7 +14,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-**I'm currently looking for a postdoctoral position in the mathematical foundations of DNNs and LLMs! (Begining From 2026 Fall)**
+**I'm currently looking for a postdoctoral position in the mathematical foundations of DNN and LLM Alignment! (Begining From 2027)**
 
 I’m Taehun Cha, a Ph.D. candidate in [AIML@K](https://aiml-k.github.io/) led by Prof. Donghun Lee. While in undergraduate school, I majored in Sociology, Cultural study, and Applied Statistics. Though I currently do not utilize most of the knowledge I learned at that time, I learned how to think, write, and communicate with people from totally different backgrounds.
 
