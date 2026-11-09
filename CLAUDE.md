@@ -11,5 +11,9 @@ Site-specific differences from upstream:
   `al_analytics`, `al_ext_posts`, `al_search`. Responsive images (imagemagick) are off.
 - CV uses `cv_format: jsonresume` → `assets/json/resume.json`.
 - Only workflow is `.github/workflows/deploy.yml` (no tests/lint workflows).
-- Paper project pages are external sites. Linked from `_projects/*.md` cards (`redirect:` field; collection has
-  `output: false`, so every card needs `redirect`) and from `website` fields in `_bibliography/papers.bib`.
+- Paper project pages are external sites. Listed on `/projects/` from `_projects/*.md` (fields: redirect, paper,
+  github, img, venue) with custom markup + inline <style> in `_pages/projects.md` (deliberately no gem overrides).
+  Collection has `output: false`; no per-project pages are generated.
+- Policy: do not shadow gem-owned files (layouts/includes/sass/main.scss) so al-folio updates stay simple.
+- Known issue: CV lists show bullets (al_folio_cv 1.0.2 bug, fixed upstream in 1.0.3 but not yet on rubygems as of
+  2026-11-09). Fix = bump `al_folio_cv` to 1.0.3 in Gemfile + Gemfile.lock (incl. CHECKSUMS) once released.

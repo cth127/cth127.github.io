@@ -18,20 +18,24 @@ Personal academic homepage of Taehun Cha, built on [al-folio](https://github.com
 
 Project pages are separate static sites hosted outside this repo. This site only links to them, in two places:
 
-1. **Projects page** (`/projects/`): one card per file in `_projects/`. Copy `_projects/weightgram.md` and edit:
+1. **Projects page** (`/projects/`): one full-width row per file in `_projects/`
+   (thumbnail left, text and buttons right). Copy `_projects/weightgram.md` and edit:
 
    ```yaml
    ---
-   title: Weight Gram Matrix
-   description: One-line summary shown on the card.
-   redirect: https://cth127.github.io/weightgram/   # where the card links
+   title: Paper title
+   venue: NeurIPS 2026                              # optional, shown in italics
+   description: One-line summary.
+   redirect: https://cth127.github.io/weightgram/   # "Project page" button (+ title/image link)
+   paper: https://arxiv.org/abs/xxxx.xxxxx          # "Paper" button
+   github: https://github.com/cth127/weightgram     # "Code" button
    img: assets/img/projects/weightgram.png          # optional thumbnail
-   github: https://github.com/cth127/weightgram     # optional code icon
    importance: 1                                    # smaller = shown first
    ---
    ```
 
-   `redirect` is required. Projects don't get their own page on this site (`output: false`), so a card with no `redirect` leads to a 404.
+   All link fields are optional; the title links to `redirect`, or to `paper` if there is no project page.
+   The layout is plain markup in `_pages/projects.md` (no gem override).
 
 2. **Publications page**: add a `website` field to the bib entry to get a "Website" button. Use `html` for the arXiv/publisher link:
 
