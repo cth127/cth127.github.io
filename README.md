@@ -8,20 +8,37 @@ Personal academic homepage of Taehun Cha, built on [al-folio](https://github.com
 | What | File |
 | --- | --- |
 | About page | `_pages/about.md` |
+| Project cards | `_projects/*.md` (thumbnails in `assets/img/projects/`) |
 | Publications | `_bibliography/papers.bib` (PDFs in `assets/pdf/<year>/`) |
 | CV page | `assets/json/resume.json` (PDF: `assets/pdf/CV.pdf`) |
 | Name, URL, scholar name highlighting | `_config.yml` |
 | Email / social links | `_data/socials.yml` |
 
-## Paper project pages
+## Projects section (paper project pages)
 
-Project pages are hosted as separate static sites (not inside this repo).
-Link them from the bib entry, e.g.
+Project pages are separate static sites hosted outside this repo. This site only links to them, in two places:
 
-```bibtex
-  html    = "https://arxiv.org/abs/xxxx.xxxxx",   % shown as an "HTML" button
-  website = "https://cth127.github.io/<paper>/", % shown as a "Website" button
-```
+1. **Projects page** (`/projects/`): one card per file in `_projects/`. Copy `_projects/weightgram.md` and edit:
+
+   ```yaml
+   ---
+   title: Weight Gram Matrix
+   description: One-line summary shown on the card.
+   redirect: https://cth127.github.io/weightgram/   # where the card links
+   img: assets/img/projects/weightgram.png          # optional thumbnail
+   github: https://github.com/cth127/weightgram     # optional code icon
+   importance: 1                                    # smaller = shown first
+   ---
+   ```
+
+   `redirect` is required. Projects don't get their own page on this site (`output: false`), so a card with no `redirect` leads to a 404.
+
+2. **Publications page**: add a `website` field to the bib entry to get a "Website" button. Use `html` for the arXiv/publisher link:
+
+   ```bibtex
+     html    = "https://arxiv.org/abs/xxxx.xxxxx",    % "HTML" button
+     website = "https://cth127.github.io/weightgram/", % "Website" button
+   ```
 
 Tip: a separate GitHub repo named e.g. `weightgram` with Pages enabled is served at
 `https://cth127.github.io/weightgram/` automatically.

@@ -183,8 +183,8 @@ newsletter:
 # Collections
 # -----------------------------------------------------------------------------
 
-# Content collections are unused on this site (news / projects / books / teachings
-# were removed). Paper project pages are hosted externally and linked from papers.bib.
+# news is unused. projects feeds the cards on /projects/; each card links to an external
+# project page via `redirect:`, so no per-project pages are generated (output: false).
 collections:
   news:
     defaults:
