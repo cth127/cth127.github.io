@@ -29,7 +29,7 @@ Project pages are separate static sites hosted outside this repo. This site only
    redirect: https://cth127.github.io/weightgram/   # "Project page" button (+ title/image link)
    paper: https://arxiv.org/abs/xxxx.xxxxx          # "Paper" button
    github: https://github.com/cth127/weightgram     # "Code" button
-   img: assets/img/projects/weightgram.png          # optional thumbnail
+   img: assets/img/projects/weightgram.png          # optional thumbnail (any landscape ratio; never cropped)
    importance: 1                                    # smaller = shown first
    ---
    ```

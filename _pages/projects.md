@@ -14,7 +14,8 @@ nav_order: 3
 -->
 <style>
   .project-list .card { margin-bottom: 1.5rem; overflow: hidden; }
-  .project-list .project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .project-list .project-thumb { display: flex; align-items: center; padding: 0.75rem; }
+  .project-list .project-thumb img { width: 100%; height: auto; } /* keep aspect ratio, never crop */
   .project-list .card-title a { color: var(--global-text-color); text-decoration: none; }
   .project-list .card-title a:hover { color: var(--global-theme-color); }
   .project-list .project-links { margin-top: 0.75rem; }
