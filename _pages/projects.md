@@ -14,8 +14,16 @@ nav_order: 3
 -->
 <style>
   .project-list .card { margin-bottom: 1.5rem; overflow: hidden; }
-  .project-list .project-thumb { display: flex; align-items: center; padding: 0.75rem; }
-  .project-list .project-thumb img { width: 100%; height: auto; } /* keep aspect ratio, never crop */
+  /* Small fixed-width thumbnail on the left, text takes the rest; stacks on narrow screens. */
+  .project-list .project-row { display: flex; align-items: center; gap: 1rem; padding: 1rem; }
+  .project-list .project-thumb { flex: 0 0 200px; } /* thumbnail width: change 200px to resize */
+  .project-list .project-thumb img { display: block; width: 100%; height: auto; border-radius: 0.25rem; } /* never cropped */
+  .project-list .project-text { flex: 1 1 auto; min-width: 0; }
+  .project-list .project-text .card-title { margin-top: 0; }
+  @media (max-width: 576px) {
+    .project-list .project-row { flex-direction: column; align-items: stretch; }
+    .project-list .project-thumb { flex-basis: auto; }
+  }
   .project-list .card-title a { color: var(--global-text-color); text-decoration: none; }
   .project-list .card-title a:hover { color: var(--global-theme-color); }
   .project-list .project-links { margin-top: 0.75rem; }
@@ -37,24 +45,22 @@ nav_order: 3
 {% assign sorted_projects = site.projects | sort: "importance" %}
 {% for project in sorted_projects %}
   <div class="card hoverable">
-    <div class="row no-gutters">
+    <div class="project-row">
       {% if project.img %}
-      <div class="col-12 col-md-4 project-thumb">
+      <div class="project-thumb">
         <a href="{{ project.redirect | default: project.paper }}">
           <img src="{{ project.img | relative_url }}" alt="{{ project.title }} thumbnail" loading="lazy">
         </a>
       </div>
       {% endif %}
-      <div class="col-12 {% if project.img %}col-md-8{% endif %}">
-        <div class="card-body">
-          <h3 class="card-title"><a href="{{ project.redirect | default: project.paper }}">{{ project.title }}</a></h3>
-          {% if project.venue %}<p class="card-text"><em>{{ project.venue }}</em></p>{% endif %}
-          <p class="card-text">{{ project.description }}</p>
-          <div class="project-links">
-            {% if project.redirect %}<a href="{{ project.redirect }}">Project page</a>{% endif %}
-            {% if project.paper %}<a href="{{ project.paper }}">Paper</a>{% endif %}
-            {% if project.github %}<a href="{{ project.github }}">Code</a>{% endif %}
-          </div>
+      <div class="project-text">
+        <h3 class="card-title"><a href="{{ project.redirect | default: project.paper }}">{{ project.title }}</a></h3>
+        {% if project.venue %}<p class="card-text"><em>{{ project.venue }}</em></p>{% endif %}
+        <p class="card-text">{{ project.description }}</p>
+        <div class="project-links">
+          {% if project.redirect %}<a href="{{ project.redirect }}">Project page</a>{% endif %}
+          {% if project.paper %}<a href="{{ project.paper }}">Paper</a>{% endif %}
+          {% if project.github %}<a href="{{ project.github }}">Code</a>{% endif %}
         </div>
       </div>
     </div>
