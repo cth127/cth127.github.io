@@ -1,10 +1,10 @@
 ---
 title: The Weight Gram Matrix Captures Sequential Feature Linearization in Deep Networks
 venue: NeurIPS 2026
-description: How deep networks sequentially linearize features toward the target.
-# redirect: https://cth127.github.io/weightgram/ # external project page (add once it exists)
+description: Gradient descent updates weights, but the weight Gram matrix records how features want to move. Deep networks use it to straighten data toward the target, layer by layer.
+redirect: https://cth127.github.io/GramLin/ # external project page
 paper: https://arxiv.org/abs/2605.06258
-# github: https://github.com/cth127/weightgram
-# img: assets/img/projects/weightgram.png # thumbnail, shown on the left (landscape images work best)
+github: https://github.com/cth127/GramLin
+# img: assets/img/projects/gramlin.png # thumbnail, shown on the left (landscape ~3:2 works best)
 importance: 1 # smaller number = shown first
 ---
